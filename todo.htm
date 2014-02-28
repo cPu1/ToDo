@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="todo.css" rel="stylesheet"/>
+		<script src="jquery-2.1.0.js"></script>
+		<script src="mustache.js"></script>
+		<script src="todo.js"></script>
+		<script src="app.js"></script>
+		<script type="text/x-mustache" id="todo-template">
+				{{#task}}
+					<li data-id="{{id}}">
+						<div class="task">
+							<input type="checkbox" {{#done}}checked{{/done}}/><span {{#done}}class="done"{{/done}}>{{name}}</span>
+						</div>
+					</li>
+				{{/task}}
+		</script>
+	</head>
+	<body>
+		<section class="new-todo">
+			<h3>Enter new ToDo</h3>
+			<section class="new-task">
+				<div class="text"><label for="task-name">New Task</label><input type="text" id="task-name" maxlength="20"/></div>
+				<div class="text"><label for="task-description">Description</label><input type="text" id="task-description"/></div>
+				<input type="button" value="ADD" id="add-todo"/>
+			</section>
+		</section>
+		<div class="todo-container">
+			<div class="todo">
+				<ul class="todo-list">
+				</ul>
+			</div>
+			<div id="buttons">
+				<input type="button" value="All" id="all"/>
+				<input type="button" value="Done" id="done"/>
+				<input type="button" value="Undone" id="undone"/>
+				<input type="button" value="+" id="toggle-new"/>
+			</div>
+			<div class="edit-task">
+				<div>
+					<label for="new-task-name">Task: </label>
+					<input type="text" id="new-task-name" value="{{name}}"/>
+				</div>
+				<div>
+					<label for="new-description">Description:</label><br/>
+					<textarea id="new-description">{{description}}</textarea>
+				</div>
+				<div class="buttons">
+					<input type="button" value="Edit" id="edit" data-id="{{id}}"/>
+					<input type="button" value="Ok" id="ok"/>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

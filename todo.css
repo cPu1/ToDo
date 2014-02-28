@@ -1,0 +1,74 @@
+div.todo {
+	border: 1px solid;
+}
+div#buttons, div.todo, .new-todo {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.edit-task {
+	display: inline-block;
+	border: 1px solid;
+	position: absolute;
+	padding: 20px;
+	display: none;
+}
+div.edit-task div.buttons {
+	text-align: right;
+}
+
+#add-todo {
+	display: inline-block;
+	margin-left : 80%;
+}
+div#buttons {
+	text-align: right;
+}
+section.new-todo {
+	border: 1px solid;
+	text-align: center;
+	display: none;
+}
+
+section.new-todo h3 {
+	border-bottom: 1px solid;
+	margin-top: 0px;
+}
+
+div.task input[type=checkbox] {
+	margin-right: 20px;
+}
+div.task {
+	text-align: left;
+}
+ul {
+	padding: 0px;
+	margin: 0px;
+}
+ul li {
+	list-style: none;
+	border: 1px solid gray;
+	padding: 10px;
+}
+input[type=button] {
+	background-color: white;
+	border: 1px solid;
+}
+#buttons {
+	border-top: none;
+}
+section.new-task label, div#edit-task label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+section.new-task input[type=text] {
+	margin-left: 15px;
+}
+div.text:nth-child(2) {
+	margin-top: 5px;
+}
+.done {
+	text-decoration: line-through;
+}

@@ -1,0 +1,16 @@
+{
+    "tasks": [
+        {
+            "name": "Do this",
+            "description": "nothing"
+        },
+        {
+            "name": "Do that",
+            "description": "asdf"
+        },
+        {
+            "name": "Do nothing",
+            "description": "what?"
+        }
+    ]
+}
